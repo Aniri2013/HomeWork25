@@ -1,10 +1,15 @@
 {% extends 'global.html' %}
-{% block content %}
+<div class="alert alert-info" role="alert">
+    {% block content %}
+<div class="alert alert-info" role="alert">
     <form method="POST" action="{% url 'register' %}">
         {% csrf_token %}
         <table>
             {{ form }}
         </table>
         <input type="submit" value="REG">
+        <p></p>
+        <a class="btn btn-secondary" href="http://127.0.0.1:8000/login/" role="Регистрация">ВХОД</a>
+
     </form>
 {% endblock %}

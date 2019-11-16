@@ -12,11 +12,11 @@ def RegView(request):
 
 def RegCreate(request):
     print()
-    print('Привет!!!')
+    print('Hello!!!')
     print()
     if request.method == 'POST':
         print()
-        print('Привет!!!')
+        print('Hiiii!!!')
         print()
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -26,6 +26,8 @@ def RegCreate(request):
             user = form.save()
             login(request, user)
             return redirect('http://127.0.0.1:8000/login/')
+        else:
+            return HttpResponseRedirect('/register/')
     else:
         return HttpResponseRedirect('/register/')
 
@@ -51,14 +53,14 @@ def LogEnter(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('http://127.0.0.1:8000/room/')
+            return redirect('http://127.0.0.1:8000/home/')
         else:
             return HttpResponseRedirect('/login/')
     else:
         return HttpResponseRedirect('/login/')
 
 def HomeView(request):
-    return render(request, 'newmodule/room.html')
+    return render(request, 'newmodule/home.html')
 
 def LogoutView(request):
     print()
