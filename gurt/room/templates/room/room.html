@@ -1,0 +1,20 @@
+{% extends 'room/templatesbase.html' %}
+
+{% block content %}
+    <table>
+      <tr>
+      <th scope="сol">Номер <br> комнаты</th>
+      <th scope="col">Имя </th>
+      <th scope="col">Фамилия</th>
+     </tr>
+        {% for i in room %}
+        <tr>
+            <td><a href="{% url 'room:personal_room' slug=i.slug %}">{{ i.Number }} </a></td>
+            <td>{{ i.Name_Student }}</td>
+            <td>{{ i.Last_nameStudent }}</td>
+            <td><a href="edit/{{room.id}}">Изменить</a>
+        </tr>
+        {% endfor %}
+    </table>
+        <a class="btn btn-success" href="http://127.0.0.1:8000/student/" role="Студенты">Студенты</a>
+{% endblock %}

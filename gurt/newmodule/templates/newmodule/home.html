@@ -1,0 +1,7 @@
+{% extends 'room/templatesbase.html' %}
+{% block content %}
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <input type="submit" value="LOGOUT">
+    </form>
+{% endblock %}

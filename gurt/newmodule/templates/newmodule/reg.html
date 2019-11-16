@@ -1,0 +1,10 @@
+{% extends 'global.html' %}
+{% block content %}
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+        <input type="submit" value="REG">
+    </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'room/templatesbase.html' %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th scope="col"> Номер <br> комнаты </th>
+            <th scope="col"> Имя</th>
+            <th scope="col"> Фамилия</th>
+        </tr>
+        <tr>
+           <td>{{ room.Number }}</td>
+           <td>{{ room.Name_Student }}</td>
+           <td>{{ room.Last_nameStudent }}</td>
+        </tr>
+    </table>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'global.html' %}
+{% block content %}
+<div class="alert alert-primary" role="alert">
+<h1> Студенты</h1>
+
+    <table>
+      <tr>
+      <th scope="col">Имя</th>
+      <th scope="col">Фамилия</th>
+      <th scope="сol">Номер <br> комнаты</th>
+      <th scope="col">Факультет</th>
+      <th scope="col">Курс</th>
+    </tr>
+        {% for i in student %}
+        <tr>
+            <td>{{ i.First_name }}</td>
+            <td>{{ i.last_name }}</td>
+            <td>{{ i.Number_room }}</td>
+            <td>{{ i.Facultet }}</td>
+            <td>{{ i.Course }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+        <a class="btn btn-primary" href="http://127.0.0.1:8000/room/" role="Комнаты">Комнаты</a>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Редактирование</title>
+</head>
+<body class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Введите номер комнаты</label><br>
+            <input type="number" name="Number" value="{{Number}}" />
+            <label>Введите Имя</label><br>
+            <input type="text" name="Name_Student" value="{{Name_Student}}" />
+            <label>Введите Фамилию</label><br>
+            <input type="text" name="Last_nameStudent" value="{{Last_nameStudent}}" />
+        </p>
+        <input type="submit" value="Сохранить" >
+    </form>
+</body>
+</html>

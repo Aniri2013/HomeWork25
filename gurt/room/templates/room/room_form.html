@@ -1,0 +1,11 @@
+{% extends 'global.html' %}
+
+{% block content %}
+    <form style="margin: auto; width: 80%;" method="POST" action="{% url 'Room:create_room' %}">
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+        <input type="submit" value="Add room" >
+    </form>
+{% endblock %}
