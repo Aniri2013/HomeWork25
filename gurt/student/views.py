@@ -5,7 +5,7 @@ def index(request):
    # print()
    # print(student)
    # print()
-  # print()
+   # print()
 
    student = Student.objects.all()
    return render(request, "student/student.html", context={"student": student})

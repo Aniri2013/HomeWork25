@@ -3,11 +3,11 @@
 </head>
 <body>
     <div class="alert alert-success" role="alert">
-        <h1> Комнаты</h1>
         <a class="btn btn-success" href="http://127.0.0.1:8000/student/" role="Студенты">Студенты</a>
         <a class="btn btn-success" href="http://127.0.0.1:8000/room/" role="Комнаты">Комнаты</a>
 
         <form method="POST" action="{% url 'logout' %}">
+
         {% csrf_token %}
                <style>
    INPUT[type="submit"] {
